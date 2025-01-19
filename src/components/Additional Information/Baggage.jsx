@@ -8,9 +8,11 @@ function Baggage({ type }) {
     <>
       <h2 className="text-lg font-semibold mt-5">Baggage Options</h2>
       <div
+        data-aos="fade-up"
+        data-aos-duration="1500"
         className={`${
           type === "additional" ? "bg-[#F6F6F6]" : "bg-[#ECEFFF]"
-        } w-full rounded-lg p-5 mt-2`}
+        } w-full rounded-lg p-5 mt-2 shadow-md`}
       >
         <div className="flex gap-4 items-center">
           <CheckCircleRoundedIcon sx={{ fontSize: 30, color: "#008C76" }} />

@@ -12,7 +12,7 @@ function AirlineDetails() {
           Airbus A350-900
         </p>
       </div>
-      <div className="w-full bg-[#F6F6F6] rounded-lg p-5 mt-2 h-1/5">
+      <div className="w-full bg-[#F6F6F6] rounded-lg p-5 mt-2 h-1/5 shadow-md">
         <div className="flex items-center gap-5 h-full">
           <div className="h-full flex flex-col items-center justify-between">
             <p className="font-semibold">12:15</p>

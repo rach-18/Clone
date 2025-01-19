@@ -7,30 +7,50 @@ import Ticket from "./Ticket";
 import { AppContext } from "../Context/AppContext";
 
 function PassengerDeatils() {
-  const { passengerDetails } = useContext(AppContext);
+  const { passengerDetails, setPassengerDetails } = useContext(AppContext);
 
-  const handleClick = () => {
-    console.log(passengerDetails);
+  const handleAddPassenger = () => {
+    const newPassenger = {
+      name: "",
+      dob: "",
+      gender: "",
+      validName: false,
+      validDob: false,
+      validGenger: false,
+    };
+
+    setPassengerDetails((prev) => ({
+      ...prev,
+      passengers: [...prev.passengers, newPassenger],
+    }));
   };
 
   return (
     <>
-      <BookingInformation />
+      <BookingInformation curStep={1} />
       <div className="mt-10">
         <Ticket />
         <p className="mt-5 text-sm text-[#626262]">1/3 STEP</p>
         <p className="font-bold text-xl">Passenger Details</p>
-        <p className="mt-5 text-lg font-semibold">Passenger 1 Details</p>
-        <PassengerCard />
+        {passengerDetails.passengers.map((passenger, index) => {
+          return (
+            <div key={index} className="mt-5 z-20">
+              <p className="text-lg font-semibold">
+                Passenger {index + 1} Details
+              </p>
+              <PassengerCard passengerIndex={index} />
+            </div>
+          );
+        })}
         <button
-          onClick={handleClick}
+          onClick={handleAddPassenger}
           className="mt-2 text-[#6B6B6B] font-semibold hover:cursor-pointer"
         >
           + Add a Passenger
         </button>
         <p className="mt-5 text-lg font-semibold">Contact Details</p>
         <ContactCard />
-        <Navigation />
+        <Navigation step={1} />
       </div>
     </>
   );

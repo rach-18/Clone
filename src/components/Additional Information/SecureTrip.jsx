@@ -45,7 +45,12 @@ function SecureTrip() {
   return (
     <>
       <h2 className="text-lg font-semibold mt-5">Make Your Trip Secure</h2>
-      <div className="bg-[#FDF1DC] p-5 rounded-lg w-full">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1500"
+        data-aos-delay="500"
+        className="bg-[#FDF1DC] p-5 rounded-lg w-full mt-2 shadow-md"
+      >
         <p>
           <span className="text-2xl font-semibold">360 $</span>/ Traveller
           (18%GST included)
