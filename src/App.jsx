@@ -5,13 +5,13 @@ import AdditionalInformation from "./components/Additional Information/Additiona
 import ReviewAndSubmit from "./components/Review and Submit/ReviewAndSubmit";
 import { AppProvider } from "./components/Context/AppContext";
 import Submission from "./components/Submission/Submission";
-import Loading from "./components/Loading";
 import "./App.css";
 import { useEffect } from "react";
-import AOS from "aos"; // Import AOS
-import "aos/dist/aos.css"; // Import AOS CSS
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
+  // AOS Animation initialization
   useEffect(() => {
     AOS.init({
       once: true, // Animation triggers only once
@@ -40,28 +40,7 @@ function App() {
             </AppProvider>
           </BrowserRouter>
         </div>
-        {/* <Loading /> */}
       </div>
-
-      {/* <BrowserRouter>
-        <AppProvider>
-          <div className="flex relative">
-            <Sidebar />
-            <div className="w-full ml-[20%] py-5 px-8">
-              <Routes>
-                <Route path="/" element={<PassengerDeatils />} />
-                <Route
-                  path="/additional-information"
-                  element={<AdditionalInformation />}
-                />
-                <Route path="/review-submit" element={<ReviewAndSubmit />} />
-                <Route path="/submission" element={<Submission />} />
-              </Routes>
-            </div>
-            
-          </div>
-        </AppProvider>
-      </BrowserRouter> */}
     </>
   );
 }
