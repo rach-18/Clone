@@ -184,7 +184,7 @@ function PassengerCard({ passengerIndex }) {
                 type="radio"
                 name={`gender-${passengerIndex}`}
                 value="Male"
-                // checked={passenger.gender === "male"}
+                checked={passenger.gender === "Male"}
               />
               <p>Male</p>
             </div>
@@ -194,7 +194,7 @@ function PassengerCard({ passengerIndex }) {
                 type="radio"
                 name={`gender-${passengerIndex}`}
                 value="Female"
-                // checked={passenger.gender === "female"}
+                checked={passenger.gender === "Female"}
               />
               <p>Female</p>
             </div>
@@ -204,7 +204,7 @@ function PassengerCard({ passengerIndex }) {
                 type="radio"
                 name={`gender-${passengerIndex}`}
                 value="Others"
-                // checked={passenger.gender === "others"}
+                checked={passenger.gender === "Others"}
               />
               <p>Others</p>
             </div>

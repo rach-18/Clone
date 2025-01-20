@@ -11,7 +11,7 @@ function ReviewAndSubmit() {
       <Loading />
       <BookingInformation curStep={3} />
       <p className="mt-5 text-sm text-[#626262]">3/3 STEP</p>
-      <p className="font-bold text-xl">Review and Submit</p>
+      <p className="font-bold sm:text-xl text-lg">Review and Submit</p>
       <AirlineDetails />
       <Passengers />
       <Baggage type="review" />

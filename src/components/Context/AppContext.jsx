@@ -1,31 +1,39 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export const AppContext = createContext();
 
 export const AppProvider = ({ children }) => {
-  const [passengerDetails, setPassengerDetails] = useState({
-    passengers: [
-      {
-        name: "",
-        dob: "",
-        gender: "",
-        validName: false,
-        validDob: false,
-        validGender: false,
+  const [passengerDetails, setPassengerDetails] = useState(() => {
+    const storedData = localStorage.getItem("passengerDetails");
+
+    return storedData ? JSON.parse(storedData) : {
+      passengers: [
+        {
+          name: "",
+          dob: null,
+          gender: "",
+          validName: false,
+          validDob: false,
+          validGender: false,
+        },
+      ],
+      contactDetails: {
+        contact: "",
+        email: "",
+        validContact: false,
+        validEmail: false,
       },
-    ],
-    contactDetails: {
-      contact: "",
-      email: "",
-      validContact: false,
-      validEmail: false,
-    },
-  });
+    }
+  })
   const [submissionError, setSubmissionError] = useState(false);
   const [secureTrip, setSecureTrip] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  useEffect(() => {
+    localStorage.setItem("passengerDetails", JSON.stringify(passengerDetails));
+  }, [passengerDetails]);
 
   const formatDate = (date) => {
     const day = String(date.getDate()).padStart(2, "0");
@@ -44,11 +52,11 @@ export const AppProvider = ({ children }) => {
 
   const resetData = () => {
     navigate("/");
-    setPassengerDetails({
+    const resetDetails = {
       passengers: [
         {
           name: "",
-          dob: "",
+          dob: null,
           gender: "",
           validName: false,
           validDob: false,
@@ -61,7 +69,9 @@ export const AppProvider = ({ children }) => {
         validContact: false,
         validEmail: false,
       },
-    });
+    };
+    setPassengerDetails(resetDetails);
+    localStorage.setItem("passengerDetails", JSON.stringify(resetDetails))
   };
   // const [passengerDetails, setPassengerDetails] = useState([{}]);
 

@@ -27,7 +27,7 @@ function Loading() {
     <>
       {loading && (
         <div
-          className={`fixed w-screen h-screen top-0 left-0 bg-gradient-to-r from-[#6575C6] via-[#D0D8FF] to-[#FAFAFA] z-30 overflow-hidden flex flex-col items-center justify-center transform ${
+          className={`fixed w-screen h-screen top-0 left-0 bg-gradient-to-r from-[#6575C6] via-[#D0D8FF] to-[#FAFAFA] z-50 overflow-hidden flex flex-col items-center justify-center transform ${
             isExiting ? "slide-in" : ""
           }`}
         >
@@ -50,8 +50,8 @@ function Loading() {
             data-aos-delay="800"
             data-aos-duration="1500"
           >
-            <img src="Plane.png" className="animate-fly" alt="Airplane" />
-            <p className="text-white text-lg mt-4 animate-bounce">
+            <img src="Plane.png" className="animate-fly sm:w-[70%] w-[45%]" alt="Airplane" />
+            <p className="text-white drop-shadow-md sm:w-full w-11/12 text-center sm:text-lg mt-4 animate-bounce">
               Fasten your seatbelt, we’re preparing for takeoff!
             </p>
           </div>

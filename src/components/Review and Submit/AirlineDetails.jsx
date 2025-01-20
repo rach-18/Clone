@@ -3,7 +3,7 @@ import RadioButtonUncheckedIcon from "@mui/icons-material/RadioButtonUnchecked";
 function AirlineDetails() {
   return (
     <>
-      <div className="flex gap-4 items-end">
+      <div className="flex sm:flex-row flex-col sm:gap-4 gap-1 sm:items-end items-start">
         <h2 className="text-lg font-semibold mt-5">
           Indigo Airline .{" "}
           <span className="text-[#626262] font-normal text-sm">IX3486</span>
@@ -12,8 +12,8 @@ function AirlineDetails() {
           Airbus A350-900
         </p>
       </div>
-      <div className="w-full bg-[#F6F6F6] rounded-lg p-5 mt-2 h-1/5 shadow-md">
-        <div className="flex items-center gap-5 h-full">
+      <div className="w-full bg-[#F6F6F6] rounded-lg p-5 mt-2 h-1/5 shadow-md sm:text-base text-sm">
+        <div className="flex items-center sm:gap-5 gap-1 h-full">
           <div className="h-full flex flex-col items-center justify-between">
             <p className="font-semibold">12:15</p>
             <p className="font-semibold">06:00</p>

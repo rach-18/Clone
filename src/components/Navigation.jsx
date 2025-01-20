@@ -12,7 +12,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "35%",
+  // width: "35%",
   bgcolor: "background.paper",
   // border: "2px solid #000",
   boxShadow: 24,
@@ -103,8 +103,8 @@ function Navigation({ step }) {
 
   return (
     <>
-      <div className="mt-5 flex items-center justify-between">
-        <button onClick={handleOpen} className="underline" to="#">
+      <div className="mt-5 flex sm:flex-row flex-col sm:gap-0 gap-2 items-center justify-between">
+        <button onClick={handleOpen} className="underline sm:block hidden" to="#">
           Cancel
         </button>
         <Modal
@@ -113,14 +113,14 @@ function Navigation({ step }) {
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"
         >
-          <Box sx={style}>
+          <Box className='xl:w-[35%] lg:w-1/2 md:w-[70%] sm:w-5/6 w-11/12' sx={style}>
             <Typography id="modal-modal-title" variant="h6" component="h2">
               Are you sure you want to cancel the booking?
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 1 }}>
               All your data will be lost!
             </Typography>
-            <div className="flex justify-center gap-2 mt-4">
+            <div className="flex sm:flex-row flex-col justify-center gap-2 mt-4">
               <button
                 onClick={handleClose}
                 className="bg-[#2D2D2D] text-white px-5 py-3 rounded-lg"
@@ -137,7 +137,7 @@ function Navigation({ step }) {
           </Box>
         </Modal>
         <div className="flex items-center gap-4">
-          {step !== 1 && (
+          {step > 1 && (
             <button
               onClick={handleBack}
               className="bg-[#F6F6F6] border-[0.1rem] border-[#F6F6F6] hover:border-black transition-all text-black px-5 py-3 rounded-lg"
@@ -152,6 +152,9 @@ function Navigation({ step }) {
             {step === 3 ? "Submit" : "Next"}
           </button>
         </div>
+        <button onClick={handleOpen} className="underline sm:hidden block" to="#">
+          Cancel
+        </button>
       </div>
     </>
   );

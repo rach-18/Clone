@@ -39,7 +39,7 @@ function Ticket() {
                 <div className="flex lg:flex-row flex-col lg:w-[35%] w-full lg:mt-0 mt-5 gap-5 lg:items-start items-center lg:border-r-[1px] border-[#A4A4A4] border-dashed w-[25%]">
                   <img src="Indigo-logo.png" alt="Indigo Logo" />
                   <div>
-                    <p className="text-xl font-semibold mb-1">Indigo Airline</p>
+                    <p className="sm:text-xl text-lg font-semibold mb-1">Indigo Airline</p>
                     <p className="text-[#626262] text-sm mb-1">
                       Airbus A350-900
                     </p>
@@ -48,7 +48,7 @@ function Ticket() {
                     </p>
                   </div>
                 </div>
-                <div className="flex items-center justify-evenly w-full">
+                <div className="flex items-center sm:gap-0 gap-2 justify-evenly w-full">
                   <div>
                     <p className="text-2xl font-semibold">12:15</p>
                     <hr className="border-[#A4A4A4] my-2" />

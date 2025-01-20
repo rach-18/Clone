@@ -55,11 +55,11 @@ function SecureTrip() {
           <span className="text-2xl font-semibold">360 $</span>/ Traveller
           (18%GST included)
         </p>
-        <div className="flex items-center gap-2 w-full mt-4">
+        <div className="flex flex-wrap items-center justify-center gap-2 w-full mt-4">
           {cardData.map((card, index) => (
             <div
               key={index}
-              className="bg-white p-5 rounded-lg flex gap-2 w-1/4"
+              className="bg-white p-5 rounded-lg flex gap-2 lg:w-[24%] sm:w-[48%] w-full"
             >
               {card.icon}
               <div>

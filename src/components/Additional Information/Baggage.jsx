@@ -16,11 +16,11 @@ function Baggage({ type }) {
       >
         <div className="flex gap-4 items-center">
           <CheckCircleRoundedIcon sx={{ fontSize: 30, color: "#008C76" }} />
-          <h3 className="text-lg">
+          <h3 className="sm:text-lg">
             <span className="font-semibold">Included - </span>Baggage per person
           </h3>
         </div>
-        <div className="mt-5 flex items-center gap-10">
+        <div className="mt-5 flex sm:flex-row flex-col items-center gap-10">
           <div className="flex items-center gap-4">
             <BusinessCenterOutlinedIcon sx={{ fontSize: 30 }} />
             <p className="font-semibold">Cabin Baggage</p>
@@ -33,7 +33,7 @@ function Baggage({ type }) {
           </div>
         </div>
         {type === "additional" && (
-          <div className="w-full p-5 rounded-lg bg-[#ECEFFF] flex gap-4 items-start mt-4">
+          <div className="w-full p-5 rounded-lg bg-[#ECEFFF] flex sm:flex-row flex-col gap-4 sm:items-start items-center mt-4">
             <InfoIcon sx={{ fontSize: 30 }} />
             <div>
               <h3 className="font-semibold">One- way Trip Combination</h3>

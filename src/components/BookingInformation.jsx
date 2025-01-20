@@ -7,7 +7,7 @@ function BookingInformation({ curStep }) {
         return <CheckCircleIcon sx={{ fontSize: 40 }} />;
       } else {
         return (
-          <p className="font-semibold text-lg border-[0.1rem] border-[#D9D9D9] rounded-full h-10 w-10 flex items-center justify-center">
+          <p className="font-semibold sm:text-lg border-[0.1rem] border-[#D9D9D9] rounded-full h-10 w-10 flex items-center justify-center">
             1
           </p>
         );
@@ -15,13 +15,13 @@ function BookingInformation({ curStep }) {
     } else if (step === 2) {
       if (curStep < 2) {
         return (
-          <p className="font-semibold text-lg text-[#A8A8A8] border-[0.1rem] border-[#D9D9D9] rounded-full h-10 w-10 flex items-center justify-center">
+          <p className="font-semibold sm:text-lg text-[#A8A8A8] border-[0.1rem] border-[#D9D9D9] rounded-full h-10 w-10 flex items-center justify-center">
             2
           </p>
         );
       } else if (curStep === 2) {
         return (
-          <p className="font-semibold text-lg border-[0.1rem] border-[#D9D9D9] rounded-full h-10 w-10 flex items-center justify-center">
+          <p className="font-semibold sm:text-lg border-[0.1rem] border-[#D9D9D9] rounded-full h-10 w-10 flex items-center justify-center">
             2
           </p>
         );
@@ -31,13 +31,13 @@ function BookingInformation({ curStep }) {
     } else {
       if (curStep < 3) {
         return (
-          <p className="font-semibold text-lg text-[#A8A8A8] border-[0.1rem] border-[#D9D9D9] rounded-full h-10 w-10 flex items-center justify-center">
+          <p className="font-semibold sm:text-lg text-[#A8A8A8] border-[0.1rem] border-[#D9D9D9] rounded-full h-10 w-10 flex items-center justify-center">
             3
           </p>
         );
       } else if (curStep === 3) {
         return (
-          <p className="font-semibold text-lg border-[0.1rem] border-[#D9D9D9] rounded-full h-10 w-10 flex items-center justify-center">
+          <p className="font-semibold sm:text-lg border-[0.1rem] border-[#D9D9D9] rounded-full h-10 w-10 flex items-center justify-center">
             3
           </p>
         );
@@ -76,7 +76,7 @@ function BookingInformation({ curStep }) {
   return (
     <>
       <div className="w-full">
-        <p className="text-2xl font-bold">Booking Information</p>
+        <p className="sm:text-2xl text-xl font-bold">Booking Information</p>
 
         {/* STEP NUMBERS */}
         <div className="flex items-center lg:w-[60%] w-[75%] mx-auto mt-5 gap-1">

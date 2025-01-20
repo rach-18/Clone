@@ -13,7 +13,7 @@ function AdditionalInformation() {
     <>
       <BookingInformation curStep={2} />
       <p className="mt-5 text-sm text-[#626262]">2/3 STEP</p>
-      <p className="font-bold text-xl">Additional Information</p>
+      <p className="font-bold sm:text-xl text-lg">Additional Information</p>
       <Baggage type="additional" />
       <SecureTrip />
       {secureTrip === "no value" && (
