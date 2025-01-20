@@ -4,7 +4,7 @@ import Navigation from "../Navigation";
 import ContactCard from "./ContactCard";
 import Ticket from "./Ticket";
 import { AppContext } from "../Context/AppContext";
-import PassengerCard from "./Passengercard";
+import PassengerCard from "./PassengerCard";
 
 function PassengerDeatils() {
   const { passengerDetails, setPassengerDetails } = useContext(AppContext);
