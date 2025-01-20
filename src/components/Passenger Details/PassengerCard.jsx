@@ -25,6 +25,7 @@ function PassengerCard({ passengerIndex }) {
   };
 
   const handleDob = (date) => {
+    console.log(date);
     const currentDate = new Date();
     const maxAgeDate = new Date(
       currentDate.setFullYear(currentDate.getFullYear() - 90)
@@ -40,6 +41,8 @@ function PassengerCard({ passengerIndex }) {
       };
       return { ...prev, passengers: updatedPassengers };
     });
+
+    console.log(passengerDetails);
   };
 
   const handleGender = (e) => {

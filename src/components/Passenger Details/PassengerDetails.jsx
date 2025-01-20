@@ -12,7 +12,7 @@ function PassengerDeatils() {
   const handleAddPassenger = () => {
     const newPassenger = {
       name: "",
-      dob: "",
+      dob: null,
       gender: "",
       validName: false,
       validDob: false,

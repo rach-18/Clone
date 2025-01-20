@@ -6,8 +6,21 @@ export const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [passengerDetails, setPassengerDetails] = useState(() => {
     const storedData = localStorage.getItem("passengerDetails");
-
-    return storedData ? JSON.parse(storedData) : {
+  
+    if (storedData) {
+      const parsedData = JSON.parse(storedData);
+  
+      // Ensure `dob` is converted back to Date objects
+      parsedData.passengers = parsedData.passengers.map((passenger) => ({
+        ...passenger,
+        dob: passenger.dob ? new Date(passenger.dob) : null,
+      }));
+  
+      return parsedData;
+    }
+  
+    // Default state
+    return {
       passengers: [
         {
           name: "",
@@ -24,8 +37,9 @@ export const AppProvider = ({ children }) => {
         validContact: false,
         validEmail: false,
       },
-    }
-  })
+    };
+  });
+  
   const [submissionError, setSubmissionError] = useState(false);
   const [secureTrip, setSecureTrip] = useState("");
   const [loading, setLoading] = useState(false);
