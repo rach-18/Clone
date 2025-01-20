@@ -2,9 +2,9 @@ import { useContext } from "react";
 import BookingInformation from "../BookingInformation";
 import Navigation from "../Navigation";
 import ContactCard from "./ContactCard";
-import PassengerCard from "./Passengercard";
 import Ticket from "./Ticket";
 import { AppContext } from "../Context/AppContext";
+import PassengerCard from "./Passengercard";
 
 function PassengerDeatils() {
   const { passengerDetails, setPassengerDetails } = useContext(AppContext);
